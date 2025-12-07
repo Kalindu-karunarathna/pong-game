@@ -35,9 +35,19 @@ right_wall.pensize(20)
 right_wall.forward(680)
 
 
+divider = Turtle()
+divider.pencolor("white")
+divider.hideturtle()
+divider.goto(0,-270)
+divider.left(90)
+divider.pensize(1)
+divider.forward(800)
+
+
 
 
 #make paddles move according to key presses
+
 screen.listen()
 screen.onkey(paddle_left.go_up,"w")
 screen.onkey(paddle_left.go_down,"s")
