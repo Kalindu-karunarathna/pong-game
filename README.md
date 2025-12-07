@@ -42,3 +42,18 @@ The game includes two paddles, a bouncing ball, collision detection, and a score
 4. Run the following command:
     ```bash
    python main.py
+   
+
+## 📦 Install Dependencies
+
+This project uses the following external Python packages:
+
+- `playsound==1.2.2` – for playing sound effects in the game  
+- `setuptools==80.9.0` – required for package installations  
+- `wheel==0.45.1` – required for building/installing some packages
+
+You can install all the packages at once using the provided `requirements.txt` file:
+
+```bash
+pip install -r requirements.txt
+
