@@ -1,5 +1,7 @@
 from turtle import Turtle
 
+#paddle class use to create paddles
+#and go_up, go_down methods make paddles move according to key press
 class Paddle(Turtle):
     def __init__(self,position):
         super().__init__()
