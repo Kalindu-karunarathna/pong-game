@@ -60,6 +60,7 @@ score=Score()
 
 
 
+
 is_game_on = True
 
 while is_game_on:
@@ -88,6 +89,14 @@ while is_game_on:
         ball.restart()
         score.left_score()
         ball.move_speed = 0.1
+
+
+    if score.l_score==3 or score.r_score==3:
+        is_game_on = False
+        screen.clear()
+        screen.bgcolor("black")
+        score.final_score()
+
 
 screen.exitonclick()
 

@@ -25,3 +25,12 @@ class Score(Turtle):
         self.l_score+=1
         self.update_score()
 
+    def final_score(self):
+        self.goto(0,0)
+        self.write(f"left score = {self.l_score}\nright score = {self.r_score}\n\n" , align="center", font=("Courier", 40, "normal"))
+        if self.l_score == 3:
+            self.write("🎉left player won🎉" , align="center", font=("Courier", 40, "normal"))
+        else:
+            self.write("🎉right player won🎉" , align="center", font=("Courier", 40, "normal"))
+
+
