@@ -16,6 +16,24 @@ screen.tracer(0)
 paddle_left = Paddle(-350)
 paddle_right = Paddle(350)
 
+left_wall = Turtle()
+left_wall.pencolor("white")
+left_wall.hideturtle()
+left_wall.penup()
+left_wall.goto(-340,270)
+left_wall.pendown()
+left_wall.pensize(20)
+left_wall.forward(680)
+
+right_wall = Turtle()
+right_wall.pencolor("white")
+right_wall.hideturtle()
+right_wall.penup()
+right_wall.goto(-340,-270)
+right_wall.pendown()
+right_wall.pensize(20)
+right_wall.forward(680)
+
 
 
 
@@ -40,7 +58,7 @@ while is_game_on:
     ball.move()
 
     #detect ball collision with wall
-    if ball.ycor()>280 or ball.ycor()<-280:
+    if ball.ycor()>240 or ball.ycor()<-240:
         ball.bounce_y()
 
     #detect ball collision with paddles
@@ -51,12 +69,12 @@ while is_game_on:
 
 
     #detect if ball pass the left and right margins
-    if ball.xcor()>400:
+    if ball.xcor()>430:
         ball.restart()
         score.right_score()
         ball.move_speed = 0.1
 
-    if ball.xcor()<-400:
+    if ball.xcor()<-430:
         ball.restart()
         score.left_score()
         ball.move_speed = 0.1
